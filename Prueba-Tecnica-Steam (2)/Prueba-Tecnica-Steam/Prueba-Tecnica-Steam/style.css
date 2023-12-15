@@ -1,0 +1,481 @@
+/*
+    z-index: movimiento de elementos en eje z
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* Estilos para el encabezado de la página */
+header {
+    background-color: #313131;
+    color: white;
+    text-align: center;
+}
+
+.subtitulo-exposiciones{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'PFDinTextPro-Bold',sans-serif;
+    font-weight: bolder;
+    line-height: 1.15;
+    text-transform: none;
+    color: #373737;
+}
+
+/* Estilos para la barra de navegación superior */
+.top-header {
+    background-color: #313131;
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    font-family: "Helvetica";
+}
+
+.top-header a:hover{
+    display: block;
+    background-color: #020202;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #444;
+    text-align: center;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.tickets {
+    background-color: #e7d800;
+    color: #020202;
+}
+.tickets:hover {
+    display: block;
+    background-color: #a58d8df8 !important;
+}
+
+
+/* Estilos generales del menú desplegable */
+.dropdown {
+    position: relative;
+    width: 63px;
+}
+
+/* Estilos de los enlaces de idioma */
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.select-item{
+    background-color: #e7d800;
+}
+
+/* Estilos del botón del menú */
+.dropdown .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de la flecha hacia abajo */
+.dropdown .btn::after {
+    content: "▼";
+    margin-left: 8px;
+}
+
+/* Estilos del menú desplegable */
+.dropdown .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.menu a:hover{
+    display: block;
+    background-color: #a58d8df8 !important;
+}
+/* Mostrar el menú al hacer clic en el botón */
+.dropdown:hover .menu {
+    display: block;
+}
+
+.double-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+} 
+
+/* Estilos para la barra de navegación principal */
+
+.navbar-one{
+    background-color: #ffffff;
+    padding: 10px;
+    /* text-align: center; */
+    font-weight: bold;
+    margin-left: 167px;
+}
+
+.navbar-one a{
+    background-color: #ffffff;
+    color: #999999;
+    font-size: 13px;
+    margin: 4px;
+}
+
+.navbar-one a:hover{
+    color: #9a7f4a;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 130px;
+    top: 73px;
+}
+
+
+/* Estilo de la barra de navegación secundaria */
+
+.navbar-two {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.navbar-two img {
+    padding-right: 300px;
+}
+.navbar-two a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 8px;
+}
+.navbar-two a:hover{
+    color: #9a7f4a;
+}
+.search {
+    margin-right: 10px;
+}
+
+/* .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background-color: #eee5d5;
+    color: #010101;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 46px;
+    top: 59px;
+    transition: background-color 0.3s ease;
+} */
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw; 
+    height: 10vw; 
+    max-width: 108px; 
+    max-height: 108px; 
+    border-radius: 50%;
+    background-color: #eee5d5;
+    color: #010101;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.8vw; 
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 1.6vw;
+    top: 3.9vw;
+    transition: background-color 0.3s ease;
+}
+
+/* Media query para ajustes en pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .circle {
+        width: 20vw;
+        height: 20vw;
+        max-width: none; 
+        max-height: none; 
+        font-size: 3vw;
+        right: 2vw;
+        top: 3vw;
+    }
+}
+
+/* Cambiar el color de fondo en hover */
+.circle:hover {
+    background-color: #665431;
+}
+
+
+/* Estilos para la sección de exposiciones */
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-width: 5px;
+    padding-top: 20px;
+}
+
+.descripcion-fechas{
+    font-family: 'PFDinTextPro-Thin',sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
+    color: #555555b5;
+}
+
+.descripcion-nombre{
+    font-weight: bold;
+    font-family: 'PFDinTextPro-Bold',sans-serif;
+    line-height: 1.15;
+    text-transform: none;
+    color: #373737;
+}
+
+.descripcion-dueño{
+    font-family: 'PFDinTextPro-Thin',sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
+    color: #555555b5;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  margin-top: 10px;
+  padding: 5px 12px 8px;
+  font-weight: bold;
+  background-image: none;
+  border-radius: 4px;
+  border-width: 2px;
+  transition: 0.2s;
+}
+
+.btn-inverse{
+    background-repeat: repeat-x;
+    background-color: #373737;
+    border-color: #373737;
+    box-shadow: 0 0 0 transparent;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+.coleccion{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.subtitulo-coleccion{
+    font-family: 'PFDinTextPro-Bold',sans-serif;
+    font-weight: bolder;
+    line-height: 1.15;
+    text-transform: none;
+    color: #373737; 
+}
+
+.subtitulo-coleccion h2{
+    margin: 0;
+    text-rendering: optimizelegibility;
+}
+
+.imagen-coleccion{
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.texto{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.texto h1{
+    font-size: xx-large;
+    color: #000000;
+}
+
+.imagen-coleccion img{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    filter: brightness(0.5);
+    width: 1164px;
+}
+
+/* Estilo de Actividades  */
+
+.actividades{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.buttonActi button {
+    display: inline-block;
+    background-color:#dfcfb1;
+    color: #93733b;
+    margin-bottom: 5px;
+    padding: 4px 8px 6px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12.8px;
+    font-weight: bold;
+    line-height: 20px; 
+    border: none;
+}
+.subtitulo-actividades{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'PFDinTextPro-Bold',sans-serif;
+    font-weight: bolder;
+    line-height: 1.15;
+    text-transform: none;
+    color: #373737;
+}
+
+.cards-informacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-width: 5px;
+    padding-top: 20px;
+}
+
+.actividad-1{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 270px;
+    /* height: 190px; */
+}
+
+.actividad-2{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 270px;
+    height: 190px;
+}
+
+.actividad-3{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 270px;
+    height: 190px;
+}
+
+.actividad-1 img{
+    width: 270px;
+    height: 190px;
+}
+
+.actividad-2 img{
+    width: 270px;
+    height: 190px;
+}
+
+.actividad-3 img{
+    width: 270px;
+    height: 190px;
+}
+
+.actividad-1 .descripcion-fechas{
+    font-size: small;
+}
+
+.actividad-2 .descripcion-fechas{
+    font-size: small;
+}
+
+.actividad-3 .descripcion-fechas{
+    font-size: small;
+}
+
+.visitas-comentadas-section{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.subtitulo-visitas{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'PFDinTextPro-Bold',sans-serif;
+    font-weight: bolder;
+    line-height: 1.15;
+    text-transform: none;
+    color: #373737;
+}
+
+.visita-1, .visita-2, .visita-3, .visita-4{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 270px;
+    height: 190px;
+}
+
+.visita-1 img, .visita-2 img, .visita-3 img, .visita-4 img{
+    width: 270px;
+    height: 190px;
+}
+
+.btn-bottom{
+    padding-top: 150px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+}

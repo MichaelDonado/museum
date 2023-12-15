@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Museo</title>
+  </head>
+  <body>
+    <!-- Encabezado de la página con barra de navegación superior -->
+    <header>
+      <nav class="top-header">
+        <a href="#">Hoy en el museo</a>
+        <a class="tickets" href="#">Entradas</a>
+        <a href="#">Guias informativas</a>
+        <a href="#">Horarios y tarifas</a>
+        <!-- Menú desplegable para seleccionar idiomas -->
+        <div class="dropdown">
+          <div class="btn">
+            ES
+            <div></div>
+          </div>
+          <div class="menu">
+            <a class="select-item" href="#">ES</a>
+            <a href="#">EN</a>
+            <a href="#">CA</a>
+            <a href="#">EU</a>
+            <a href="#">GL</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="double-nav">
+      <div class="logo">
+        <img src="img/LOGO-MUSEO.png" alt/>
+      </div>
+      <!-- Barra de navegacion  -->
+      <nav class="navbar-one">
+        <a href="#">Prensa</a>
+        <a href="#">Restauracion</a>
+        <a href="#">Biblioteca y Centro de Documentacion</a>
+        <a href="#">Educacion</a>
+        <a href="#">Centro de estudios</a>
+        <a href="#">Colabora</a>
+      </nav>
+
+      <!-- Barra de navegación principal con enlaces y logo -->
+      <nav class="navbar-two">
+        <a href="#">VISITA</a>
+        <a href="#">PUBLICACIONES</a>
+        <a href="#">COLECCION</a>
+        <a href="#">EXPOSICIONES</a>
+        <a href="#">ACTIVIDADES</a>
+        <!-- Logo de search -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="16"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+          />
+        </svg>
+      </nav>
+      <div class="circle">Hazte Amigo</div>
+    </div>
+
+    <!-- Sección de exposiciones con tarjetas de información -->
+    <section>
+      <div class="exposiciones">
+        <h2 class="subtitulo-exposiciones">Exposiciones</h2>
+        <div class="cards">
+          <div class="card-1">
+            <img
+              src="https://static4.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/exposiciones/ulla_snippet_0.jpg?itok=MbN2urAt"
+              alt="Vista de la exposición Ulla von Brandenburg. Espacios de una secuencia, Museo Reina Sofía, 2023"
+              title="Vista de la exposición Ulla von Brandenburg. Espacios de una secuencia, Museo Reina Sofía, 2023"
+            />
+            <div class="descripcion">
+              <p class="descripcion-fechas">
+                1 diciembre, 2023 - 10 marzo, 2024
+              </p>
+              <p class="descripcion-nombre">Ulla von Brandenburg</p>
+              <p class="descripcion-dueño">Espacios de una secuencia</p>
+            </div>
+          </div>
+          <div class="card-2">
+            <img
+              src="https://static3.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/exposiciones/ibon_principal_snippet.jpg?itok=Y7A3IfXN"
+              alt
+              width="380"
+              height="280"
+            /><br />
+            <div class="descripcion">
+              <p class="descripcion-fechas">
+                29 Noviembre, 2023 - 11 Marzo. 2024
+              </p>
+              <p class="descripcion-nombre">Ibone Aranberri</p>
+              <p class="descripcion-dueño">Vista parcial</p>
+            </div>
+          </div>
+          <div class="card-3">
+            <img
+              src="https://static5.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/exposiciones/picasso_1906_nude_snippet.jpg?itok=bK4mom_B"
+              alt
+              width="380"
+              height="280"
+            /><br />
+            <div class="descripcion">
+              <p class="descripcion-fechas">
+                15 noviembre, 2023 - 4 marzo, 2024
+              </p>
+              <p class="descripcion-nombre">Picasso 1906</p>
+              <p class="descripcion-dueño">La gran transformacion</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-inverse" href="#">
+            Ver todas las exposiciones &rarr;
+            <i class="icon-chevron-right icon-white"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="coleccion">
+        <h2 class="subtitulo-coleccion">Colección</h2>
+        <div class="imagen-coleccion">
+          <img src="img/coleccion.png" alt />
+          <!-- <div class="texto"><h1>Colección</h1></div> -->
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="subtitulo-actividades">Actividades</h2>
+      <div class="cards-informacion">
+        <div class="actividad-1">
+          <img
+            src="https://static1.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/actividad/listado/fungi_snippet.jpg?itok=D8aQtedp"
+            alt
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              Martes 28, miércoles 29 y 30 de noviembre, 2023 - Consultar
+              programa
+            </p>
+            <p class="descripcion-nombre">Archivos del común V</p>
+            <p class="descripcion-dueño">Memorias fúngicas</p>
+            <div class="buttonActi">
+              <!-- <button>Encuentro</button> -->
+              <button>Seminarios y conferencias</button>
+            </div>
+          </div>
+        </div>
+        <div class="actividad-2">
+          <img
+            src="https://static4.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/actividad/listado/picasson_congreso_snippet.jpg?itok=72ovdPp-"
+            alt="Pablo Picasso, Busto de mujer joven, 1906. © Sucesión Pablo&nbsp;Picasso, VEGAP, Madrid, 2023"
+            title="Pablo Picasso, Busto de mujer joven, 1906. © Sucesión Pablo&nbsp;Picasso, VEGAP, Madrid, 2023"
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              Miércoles 4 de octubre, jueves 23 de noviembre, 2023 y miércoles
+              10 de enero, 2024 - Consultar programa
+            </p>
+            <p class="descripcion-nombre">
+              Picasso 1906. La gran transformación
+            </p>
+            <p class="descripcion-dueño">Encuentro sobre Ben Shahn</p>
+            <div class="buttonActi">
+              <!-- <button>Encuentro</button> -->
+              <button>Cine y video</button>
+            </div>
+          </div>
+        </div>
+        <div class="actividad-3">
+          <img
+            src="https://static2.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/actividad/listado/philip_rizksnippet.jpg?itok=Ebgnr6Lb"
+            alt
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              Jueves 23 y viernes 24 de noviembre, 2023 - Consultar programa
+            </p>
+            <p class="descripcion-nombre">
+              ¿Pueden las imágenes (de archivo) contribuir a “poner fin al mundo
+              tal y como lo conocemos”?
+            </p>
+            <p class="descripcion-dueño">
+              Encuentro y taller con el cineasta Philip Rizk
+            </p>
+            <div class="buttonActi">
+              <!-- <button>Encuentro</button> -->
+              <button>Artes en vivo</button>
+            </div>
+          </div>
+        </div>
+        <div class="actividad-4">
+         <!-- hacer la faltante de actividades -->
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              Jueves 23 y viernes 24 de noviembre, 2023 - Consultar programa
+            </p>
+            <p class="descripcion-nombre">
+              ¿Pueden las imágenes (de archivo) contribuir a “poner fin al mundo
+              tal y como lo conocemos”?
+            </p>
+            <p class="descripcion-dueño">
+              Encuentro y taller con el cineasta Philip Rizk
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-inverse" href="#">
+          Ver todas las actividades &rarr;
+          <i class="icon-chevron-right icon-white"></i>
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="subtitulo-visitas">Visitas comentadas</h2>
+      <div class="cards-informacion">
+        <div class="visita-1">
+          <img
+            src="https://static3.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/visita-guiada/por_donde_empiezo_snippet.jpg?itok=gfTzQqK2"
+            alt
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              De lunes a domingo - Consultar horarios
+            </p>
+            <p class="descripcion-nombre">¿Por dónde empiezo?</p>
+            <p class="descripcion-dueño">
+              Breve introducción al Museo y su Colección
+            </p>
+            <div class="buttonActi">
+              <button>Visita comentada</button>
+            </div>
+          </div>
+        </div>
+        <div class="visita-2">
+          <img
+            src="https://static2.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/visita-guiada/salirse_del_margen_snippet_2.jpg?itok=vFLYpSWf"
+            alt
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              Lunes, viernes y sábado - Consultar horarios
+            </p>
+            <p class="descripcion-nombre">
+              Salirse del margen. El extrañamiento del errante
+            </p>
+            <p class="descripcion-dueño">
+              Visita para adultos sobre el exilio con material de la Biblioteca
+              y Centro de Documentación
+            </p>
+            <div class="buttonActi">
+              <button>Visita comentada</button>
+            </div>
+          </div>
+        </div>
+        <div class="visita-3">
+          <img
+            src="https://static4.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/visita-guiada/guernica_snippet_0.png?itok=_LaByAcx"
+            alt
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              Jueves, sábado y domingo - Consultar horarios
+            </p>
+            <p class="descripcion-nombre">Desplazar</p>
+            <p class="descripcion-dueño">
+              Visita para adultos a obras de la Colección
+            </p>
+            <div class="buttonActi">
+              <button>Visita comentada</button>
+            </div>
+          </div>
+        </div>
+        <div class="visita-4">
+          <img
+            src="https://static3.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/visita-guiada/visita_snippet.jpg?itok=WAxeb5lE"
+            alt
+          />
+          <div class="descripcion-actividad">
+            <p class="descripcion-fechas">
+              De jueves a domingo - Consultar horarios
+            </p>
+            <p class="descripcion-nombre">Nunca en reposo</p>
+            <p class="descripcion-dueño">
+              Visita para adult+s a la Colección desde la arquitectura
+            </p>
+            <div class="buttonActi">
+              <button>Visita comentada</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-bottom">
+        <button class="btn btn-inverse" href="#">
+          Ver todas las actividades &rarr;
+          <i class="icon-chevron-right icon-white"></i>
+        </button>
+      </div>
+    </section>
+    <section>
+      <h1 class="title">Multimedia</h1>
+      <br />
+      <h3 class="title">Vídeos</h3>
+      <div class="cards">
+        <div class="card-1">
+          <iframe
+            width="400"
+            height="200"
+            src="img/video4.mp4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <div class="descripcion1">
+            <p class="descripcion-nombre">Ulla von Brandenburg</p>
+            <p class="descripcion-dueño">Espacios de una secuencia</p>
+            <div class="buttonActi">
+              <button>Exposiciones</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-2">
+          <iframe
+            width="400"
+            height="200"
+            src="img/video1.mp4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <div class="descripcion2">
+            <p class="descripcion-nombre">Ibon Aranberri </p>
+            <p class="descripcion-dueño">Vista parcial</p>
+            <div class="buttonActi">
+              <button>Exposiciones</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-3">
+            <iframe
+              width="400"
+              height="200"
+              src="img/video3.mp4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="descripcion3">
+              <p class="descripcion-nombre">Picaso 1906</p>
+              <p class="descripcion-dueño">La gran transformacion</p>
+              <div class="buttonActi
+              ">
+                <button>Exposiciones</button>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="btn-bottom">
+        <button class="btn btn-inverse" href="#">
+          Ver todos los archivos multimedia &rarr;
+          <i class="icon-chevron-right icon-white"></i>
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="exposiciones">
+        <h2 class="subtitulo-exposiciones">Publicaciones</h2>
+        <div class="cards">
+          <div class="publi-1">
+            <img
+              src="https://static4.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/publicaciones/vasos_comunicantes_vol1.jpg?itok=xbWJwr-W"
+              alt="Vasos comunicantes. Vol. 1"
+              title="Vasos comunicantes. Vol. 1"
+            />
+            <div class="descripcion1">
+              <p class="descripcion-nombre">Vasos comunicantes. Vol. 1</p>
+              <p class="descripcion-dueño">coleccion 1881-2021</p>
+            </div>
+          </div>
+          <div class="publi-2">
+            <img
+              src="https://static3.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3_publi_nueva/public/publicaciones/sep-esp.jpg?itok=vO-XN4Rk"
+              alt="Cubierta de la publicación Llámalo de otra manera. Something Else Press, Inc. (1963-1974)"
+              title="Cubierta de la publicación Llámalo de otra manera. Something Else Press, Inc. (1963-1974)"
+            />
+            <div class="descripcion2">
+              <p class="descripcion-nombre">Llamalo de otra manera</p>
+              <p class="descripcion-dueño">
+                Something Else Press, Inc.(1963-1974)
+              </p>
+            </div>
+          </div>
+          <div class="publi-3">
+            <img
+              src="https://static5.museoreinasofia.es/sites/default/files/styles/banner_grid_4x3/public/publicaciones/screenshot_2023-03-29_at_18-22-43_v07_reina-sofia_escuela-perturbable_interior_tsu_230328.pdf_.png?itok=3_lD54Bc"
+              alt="Portada de Escuela Perturbable, 2023"
+              title="Portada de Escuela Perturbable, 2023"
+            />
+            <div class="descripcion3">
+              <p class="descripcion-nombre">Escuela Perturbable</p>
+              <p class="descripcion-dueño">Coleccion Desaprender 2</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-inverse" href="#">
+            Ver todas las Publicaciones &rarr;
+            <i class="icon-chevron-right icon-white"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Pie de página con información de copyright -->
+    <footer>
+      <p>&copy; 2023 Museo Virtual</p>
+    </footer>
+  </body>
+</html>
